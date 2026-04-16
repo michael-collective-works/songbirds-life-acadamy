@@ -9,34 +9,52 @@ const iconSvg = {
 } as const
 ---
 
-<section class="badges">
-  {copy.badges.map((badge) => (
-    <div class="badge">
-      <div class="icon" set:html={iconSvg[badge.key]}></div>
-      <div class="title">{badge.title}</div>
-      <div class="subtitle">{badge.subtitle}</div>
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      {copy.badges.map((badge) => (
+        <div class="badge">
+          <div class="icon" set:html={iconSvg[badge.key]}></div>
+          <div>
+            <div class="title">{badge.title}</div>
+            <div class="subtitle">{badge.subtitle}</div>
+          </div>
+        </div>
+      ))}
     </div>
-  ))}
+  </div>
 </section>
 
 <style>
-  .badges {
+  .section {
     background: var(--color-cream-deep);
-    padding: 28px 22px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    padding: 32px 0;
     font-family: var(--font-sans);
   }
 
-  @media (max-width: 640px) {
-    .badges {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
       grid-template-columns: 1fr 1fr;
-      gap: 20px 18px;
+      gap: 24px 20px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .grid {
+      grid-template-columns: 1fr;
     }
   }
 
   .badge {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
     font-size: 11.5px;
     color: var(--color-navy);
     line-height: 1.4;
@@ -45,13 +63,13 @@ const iconSvg = {
 
   .icon {
     color: var(--color-teal);
-    margin-bottom: 10px;
+    flex-shrink: 0;
     display: block;
   }
 
   .icon :global(svg) {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
     display: block;
   }
 
@@ -64,7 +82,7 @@ const iconSvg = {
 
   .subtitle {
     color: #6a5a3a;
-    margin-top: 2px;
+    margin-top: 3px;
     font-size: 11.5px;
     line-height: 1.4;
   }

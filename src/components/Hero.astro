@@ -9,36 +9,40 @@ import drums from '../assets/photos/drums-overhead.jpg'
   <Image
     src={drums}
     alt="Overhead view of a young child playing a drum kit in the Songbirds classroom"
-    widths={[480, 768, 1200, 1600]}
+    widths={[480, 768, 1200, 1600, 2000]}
     sizes="100vw"
     format="webp"
     quality={78}
     class="bg"
   />
   <div class="scrim"></div>
-  <div class="content">
-    <div class="eyebrow">{copy.heroEyebrow}</div>
-    <h1 class="headline">A joyful start, <em>immersed in music.</em></h1>
-    <p class="body">{copy.heroBody}</p>
-    <div class="ctas">
-      <a
-        class="cta-primary"
-        href={contact.inquiryFormUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {copy.heroCta} ↗
-      </a>
-      <a class="cta-secondary" href={contact.phoneHref}>📞 {contact.phone}</a>
+  <div class="container">
+    <div class="content">
+      <div class="eyebrow">{copy.heroEyebrow}</div>
+      <h1 class="headline">A joyful start, <em>immersed in music.</em></h1>
+      <p class="body">{copy.heroBody}</p>
+      <div class="ctas">
+        <a
+          class="cta-primary"
+          href={contact.inquiryFormUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {copy.heroCta} ↗
+        </a>
+        <a class="cta-secondary" href={contact.phoneHref}>📞 {contact.phone}</a>
+      </div>
+      <div class="response">{copy.responseNote}</div>
     </div>
-    <div class="response">{copy.responseNote}</div>
   </div>
 </section>
 
 <style>
   .hero {
     position: relative;
-    min-height: 78vh;
+    min-height: 560px;
+    height: 78vh;
+    max-height: 780px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -67,11 +71,15 @@ import drums from '../assets/photos/drums-overhead.jpg'
     z-index: 1;
   }
 
-  .content {
+  .container {
     position: relative;
     z-index: 2;
-    padding: 32px 22px 44px;
     width: 100%;
+    padding-top: 32px;
+    padding-bottom: 44px;
+  }
+
+  .content {
     max-width: 44rem;
   }
 
@@ -84,7 +92,7 @@ import drums from '../assets/photos/drums-overhead.jpg'
 
   .headline {
     font-family: var(--font-serif);
-    font-size: clamp(34px, 7vw, 56px);
+    font-size: clamp(34px, 6vw, 60px);
     line-height: 1.1;
     color: var(--color-cream);
     margin: 12px 0 0;

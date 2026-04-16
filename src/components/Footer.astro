@@ -3,25 +3,27 @@ import {contact} from '../content/contact'
 ---
 
 <footer class="footer">
-  <div class="row">
-    <span class="icon">📞</span>
-    <a href={contact.phoneHref}>{contact.phone}</a>
-  </div>
-  <div class="row">
-    <span class="icon">📍</span>
-    <a href={contact.addressHref} target="_blank" rel="noopener noreferrer">{contact.address}</a>
-  </div>
-  <div class="row">
-    <span class="icon">🕒</span>
-    <span>{contact.hours}</span>
-    <span class="muted"> · {contact.hoursNote}</span>
-  </div>
-  <div class="row">
-    <span class="icon">📷</span>
-    <a href={contact.instagram} target="_blank" rel="noopener noreferrer">{contact.handle}</a>
-    <span class="muted"> · Instagram</span>
-    <span class="muted"> · </span>
-    <a href={contact.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
+  <div class="container inner">
+    <div class="row">
+      <span class="icon">📞</span>
+      <a href={contact.phoneHref}>{contact.phone}</a>
+    </div>
+    <div class="row">
+      <span class="icon">📍</span>
+      <a href={contact.addressHref} target="_blank" rel="noopener noreferrer">{contact.address}</a>
+    </div>
+    <div class="row">
+      <span class="icon">🕒</span>
+      <span>{contact.hours}</span>
+      <span class="muted"> · {contact.hoursNote}</span>
+    </div>
+    <div class="row">
+      <span class="icon">📷</span>
+      <a href={contact.instagram} target="_blank" rel="noopener noreferrer">{contact.handle}</a>
+      <span class="muted"> · Instagram</span>
+      <span class="muted"> · </span>
+      <a href={contact.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
   </div>
 </footer>
 
@@ -29,7 +31,7 @@ import {contact} from '../content/contact'
   .footer {
     background: var(--color-ink);
     color: var(--color-bronze);
-    padding: 24px 22px calc(24px + env(safe-area-inset-bottom));
+    padding: 32px 0 calc(32px + env(safe-area-inset-bottom));
     font-family: var(--font-sans);
     font-size: 13px;
     line-height: 1.9;
@@ -37,7 +39,19 @@ import {contact} from '../content/contact'
 
   @media (max-width: 720px) {
     .footer {
-      padding-bottom: calc(64px + env(safe-area-inset-bottom));
+      padding-bottom: calc(68px + env(safe-area-inset-bottom));
+    }
+  }
+
+  .inner {
+    display: grid;
+    gap: 4px;
+  }
+
+  @media (min-width: 900px) {
+    .inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 48px;
     }
   }
 

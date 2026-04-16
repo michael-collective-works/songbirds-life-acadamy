@@ -4,53 +4,69 @@ import train from '../assets/photos/train-play.jpg'
 import alphabet from '../assets/photos/alphabet-mat.jpg'
 ---
 
-<section class="strip">
-  <div class="large">
-    <Image
-      src={train}
-      alt="A toddler in a polo shirt playing with a wooden train set on the classroom floor, a drum kit behind him"
-      widths={[480, 900, 1400]}
-      sizes="(max-width: 768px) 100vw, 66vw"
-      format="webp"
-      quality={80}
-    />
-  </div>
-  <div class="small">
-    <Image
-      src={alphabet}
-      alt="Top-down view of a child on a colorful alphabet foam mat surrounded by learning toys"
-      widths={[320, 640, 960]}
-      sizes="(max-width: 768px) 100vw, 33vw"
-      format="webp"
-      quality={80}
-    />
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <figure class="tile">
+        <Image
+          src={train}
+          alt="A toddler in a polo shirt playing with a wooden train set on the classroom floor, a drum kit behind him"
+          widths={[480, 720, 960]}
+          sizes="(max-width: 720px) 100vw, 560px"
+          format="webp"
+          quality={80}
+        />
+      </figure>
+      <figure class="tile">
+        <Image
+          src={alphabet}
+          alt="Top-down view of a child on a colorful alphabet foam mat surrounded by learning toys"
+          widths={[480, 720, 960]}
+          sizes="(max-width: 720px) 100vw, 560px"
+          format="webp"
+          quality={80}
+        />
+      </figure>
+    </div>
   </div>
 </section>
 
 <style>
-  .strip {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 6px;
-    padding: 0 22px;
+  .section {
+    padding: 16px 0 32px;
+    background: var(--color-cream);
   }
 
-  @media (max-width: 640px) {
-    .strip {
-      grid-template-columns: 1fr;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: 900px) {
+    .grid {
+      gap: 20px;
     }
   }
 
-  .strip :global(img) {
+  @media (max-width: 640px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  .tile {
+    margin: 0;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 6px;
+    background: var(--color-cream-deep);
+  }
+
+  .tile :global(img) {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
-  }
-
-  .large, .small {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    border-radius: 4px;
   }
 </style>

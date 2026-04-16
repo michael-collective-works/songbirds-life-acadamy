@@ -9,36 +9,46 @@ const accentVar = {
 } as const
 ---
 
-<section id="program" class="highlights">
-  <div class="eyebrow">{copy.highlightsEyebrow}</div>
-  <ul class="grid">
-    {copy.highlights.map((item) => (
-      <li class="card" style={`--accent:${accentVar[item.accent]}`}>
-        <span class="text">{item.text}</span>
-      </li>
-    ))}
-  </ul>
+<section id="program" class="section">
+  <div class="container">
+    <div class="eyebrow">{copy.highlightsEyebrow}</div>
+    <ul class="grid">
+      {copy.highlights.map((item) => (
+        <li class="card" style={`--accent:${accentVar[item.accent]}`}>
+          <span class="text">{item.text}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
 </section>
 
 <style>
-  .highlights {
-    padding: 28px 22px;
+  .section {
+    padding: 40px 0 48px;
+    background: var(--color-cream);
   }
 
   .eyebrow {
     font-family: var(--font-sans);
     font-size: 10px;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.28em;
     color: var(--color-bronze);
   }
 
   .grid {
     list-style: none;
     padding: 0;
-    margin: 12px 0 0;
+    margin: 14px 0 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -50,9 +60,12 @@ const accentVar = {
   .card {
     background: #fff;
     border-left: 3px solid var(--accent);
-    padding: 14px 16px;
+    padding: 16px 18px;
     box-shadow: var(--shadow-soft);
-    border-radius: 2px;
+    border-radius: 3px;
+    min-height: 78px;
+    display: flex;
+    align-items: center;
   }
 
   .text {

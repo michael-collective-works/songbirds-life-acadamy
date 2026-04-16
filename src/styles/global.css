@@ -32,3 +32,23 @@
     display: block;
   }
 }
+
+:root {
+  --content-max: 1120px;
+  --gutter: 22px;
+  --gutter-lg: 32px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+  .container {
+    padding: 0 var(--gutter-lg);
+  }
+}
