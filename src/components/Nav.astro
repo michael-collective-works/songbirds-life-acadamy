@@ -6,7 +6,10 @@ import {contact} from '../content/contact'
   <div class="container nav-inner">
     <a href="/" class="nav-brand" aria-label={`${contact.name} home`}>
       <img src="/logo.svg" alt="" class="nav-logo" width="40" height="40" />
-      <span class="nav-wordmark">{contact.name.toUpperCase()}</span>
+      <span class="nav-wordmark">
+        <span class="nav-wordmark-main">{contact.shortName.toUpperCase()}</span>
+        <span class="nav-wordmark-sub">for the Youth</span>
+      </span>
     </a>
     <div class="nav-links">
       <a href="#about">About</a>
@@ -53,13 +56,33 @@ import {contact} from '../content/contact'
   }
 
   .nav-wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .nav-wordmark-main {
     font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-wordmark-sub {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    opacity: 0.85;
+    margin-top: 2px;
   }
 
   @media (max-width: 420px) {
-    .nav-wordmark {
+    .nav-wordmark-main {
       font-size: 11px;
       letter-spacing: 0.06em;
+    }
+
+    .nav-wordmark-sub {
+      font-size: 9px;
     }
   }
 

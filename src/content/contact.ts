@@ -1,5 +1,7 @@
 export const contact = {
-  name: 'Songbirds Life Academy',
+  name: 'Songbirds Life Academy for the Youth',
+  shortName: 'Songbirds Life Academy',
+  acronym: 'S.L.A.Y.',
   tagline: 'Learning through play, immersed in music.',
   phone: '225.635.7973',
   phoneHref: 'tel:+12256357973',

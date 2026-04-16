@@ -1,5 +1,5 @@
 export const copy = {
-  heroEyebrow: 'SONGBIRDS LIFE ACADEMY · ST. FRANCISVILLE, LA',
+  heroEyebrow: 'S.L.A.Y. · ST. FRANCISVILLE, LOUISIANA',
   heroHeadline: 'A joyful start, immersed in music.',
   heroBody:
     'Infant–Toddler care (6 weeks to 3 years) grounded in creativity, community, and research-based learning.',
