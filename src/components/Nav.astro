@@ -4,7 +4,10 @@ import {contact} from '../content/contact'
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="/" class="nav-brand">🎵 {contact.name.toUpperCase()}</a>
+    <a href="/" class="nav-brand" aria-label={`${contact.name} home`}>
+      <img src="/logo.svg" alt="" class="nav-logo" width="40" height="40" />
+      <span class="nav-wordmark">{contact.name.toUpperCase()}</span>
+    </a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#program">Program</a>
@@ -25,15 +28,39 @@ import {contact} from '../content/contact'
   }
 
   .nav-inner {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-weight: 600;
+  }
+
+  .nav-logo {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: var(--color-cream);
+    border-radius: 6px;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  .nav-wordmark {
+    font-size: 13px;
+  }
+
+  @media (max-width: 420px) {
+    .nav-wordmark {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
   }
 
   .nav-links {
