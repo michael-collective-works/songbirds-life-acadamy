@@ -14,4 +14,6 @@ export const contact = {
   handle: '@songbirdslifeacademy',
   inquiryFormUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLScscInS8DxErCY4MZX4yDZicZjMDvmjrwzRfNmfNK4hGjQT3Q/viewform',
+  musicLessonsSignupUrl:
+    'https://docs.google.com/forms/d/e/1FAIpQLScscInS8DxErCY4MZX4yDZicZjMDvmjrwzRfNmfNK4hGjQT3Q/viewform',
 } as const
