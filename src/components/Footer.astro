@@ -29,10 +29,16 @@ import {contact} from '../content/contact'
   .footer {
     background: var(--color-ink);
     color: var(--color-bronze);
-    padding: 24px 22px;
+    padding: 24px 22px calc(24px + env(safe-area-inset-bottom));
     font-family: var(--font-sans);
     font-size: 13px;
     line-height: 1.9;
+  }
+
+  @media (max-width: 720px) {
+    .footer {
+      padding-bottom: calc(64px + env(safe-area-inset-bottom));
+    }
   }
 
   .footer a {

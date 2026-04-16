@@ -13,6 +13,7 @@ import {contact} from '../content/contact'
   >
     {copy.ctaButton} ↗
   </a>
+  <div class="response">{copy.responseNote}</div>
 </section>
 
 <style>
@@ -34,13 +35,22 @@ import {contact} from '../content/contact'
 
   .button {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 22px;
     background: var(--color-burnt-orange);
     color: var(--color-cream);
-    padding: 12px 26px;
+    padding: 13px 28px;
     border-radius: 4px;
     font-family: var(--font-sans);
     font-size: 14px;
     font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .response {
+    margin-top: 14px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--color-cream);
+    opacity: 0.75;
   }
 </style>

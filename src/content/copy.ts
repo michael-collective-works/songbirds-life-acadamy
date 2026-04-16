@@ -3,10 +3,12 @@ export const copy = {
   heroHeadline: 'A joyful start, immersed in music.',
   heroBody:
     'Infant–Toddler care (6 weeks to 3 years) grounded in creativity, community, and research-based learning.',
-  heroCta: 'Begin an inquiry',
+  heroCta: 'Schedule a visit',
+  responseNote: 'We reply within 24 hours and can schedule a tour.',
   missionEyebrow: 'A STRONG START · A LASTING SONG',
   missionLead:
     'Through a community of creatives with deep roots and rich legacy, we build the early childhood education our town deserves.',
+  missionSummary: 'How we teach',
   missionBody: [
     'At Songbirds, we believe the earliest years are the most important. Our Infant–Toddler Program (ages 6 weeks to 3 years) nurtures each child\u2019s development through warm, responsive care and intentional learning experiences in a safe, loving environment.',
     'Music is at the core of our academy\u2019s philosophy. From soft lullabies that calm to clapping, humming, dancing, and instrumentation, music is used daily to support emotional bonding, language development, social growth, and motor skills.',
@@ -20,12 +22,12 @@ export const copy = {
     {accent: 'navy', text: 'Daily communication and photo updates for families'},
   ],
   badges: [
-    {icon: '\ud83c\udfdb\ufe0f', title: 'LA State', subtitle: 'Licensed'},
-    {icon: '\ud83d\udcd8', title: 'Creative', subtitle: 'Curriculum®'},
-    {icon: '\ud83c\udfbc', title: 'Music-', subtitle: 'Immersed'},
-    {icon: '\ud83d\udcf1', title: 'Daily Photo', subtitle: 'Updates'},
+    {key: 'licensed', title: 'LA State Licensed', subtitle: 'Certified early learning center'},
+    {key: 'curriculum', title: 'Creative Curriculum®', subtitle: 'Research-based program'},
+    {key: 'music', title: 'Music-Immersed', subtitle: 'Instruments and song every day'},
+    {key: 'updates', title: 'Daily Photo Updates', subtitle: 'You never miss a moment'},
   ],
   ctaHeadline:
     'Partner with us to give your child a joyful beginning where learning and love go hand in hand.',
-  ctaButton: 'Begin an inquiry',
+  ctaButton: 'Schedule a visit',
 } as const
