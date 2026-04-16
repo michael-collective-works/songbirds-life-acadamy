@@ -54,7 +54,7 @@ describe('rendered index.html', () => {
     })
   })
 
-  it('surfaces the state license trust badge', () => {
-    expect($('body').text()).toContain('LA State')
+  it('surfaces the Louisiana Department of Education license as a trust badge', () => {
+    expect($('body').text()).toContain('Louisiana Dept. of Education')
   })
 })
