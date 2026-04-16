@@ -1,0 +1,53 @@
+---
+import {contact} from '../content/contact'
+---
+
+<footer class="footer">
+  <div class="row">
+    <span class="icon">📞</span>
+    <a href={contact.phoneHref}>{contact.phone}</a>
+  </div>
+  <div class="row">
+    <span class="icon">📍</span>
+    <a href={contact.addressHref} target="_blank" rel="noopener noreferrer">{contact.address}</a>
+  </div>
+  <div class="row">
+    <span class="icon">🕒</span>
+    <span>{contact.hours}</span>
+    <span class="muted"> · {contact.hoursNote}</span>
+  </div>
+  <div class="row">
+    <span class="icon">📷</span>
+    <a href={contact.instagram} target="_blank" rel="noopener noreferrer">{contact.handle}</a>
+    <span class="muted"> · Instagram</span>
+    <span class="muted"> · </span>
+    <a href={contact.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-ink);
+    color: var(--color-bronze);
+    padding: 24px 22px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .footer a {
+    color: var(--color-cream);
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .icon {
+    margin-right: 6px;
+  }
+
+  .muted {
+    color: var(--color-bronze);
+  }
+</style>
