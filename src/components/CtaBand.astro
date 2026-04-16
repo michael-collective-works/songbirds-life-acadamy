@@ -1,0 +1,46 @@
+---
+import {copy} from '../content/copy'
+import {contact} from '../content/contact'
+---
+
+<section class="cta-band">
+  <p class="headline">{copy.ctaHeadline}</p>
+  <a
+    class="button"
+    href={contact.inquiryFormUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {copy.ctaButton} ↗
+  </a>
+</section>
+
+<style>
+  .cta-band {
+    padding: 40px 22px;
+    background: var(--color-navy);
+    color: var(--color-cream);
+    text-align: center;
+  }
+
+  .headline {
+    font-family: var(--font-serif);
+    font-size: clamp(18px, 4vw, 22px);
+    line-height: 1.4;
+    max-width: 38rem;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--color-burnt-orange);
+    color: var(--color-cream);
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+  }
+</style>
