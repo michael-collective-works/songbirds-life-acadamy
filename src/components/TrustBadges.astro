@@ -1,0 +1,46 @@
+---
+import {copy} from '../content/copy'
+---
+
+<section class="badges">
+  {copy.badges.map((badge) => (
+    <div class="badge">
+      <div class="icon">{badge.icon}</div>
+      <div class="title">{badge.title}</div>
+      <div class="subtitle">{badge.subtitle}</div>
+    </div>
+  ))}
+</section>
+
+<style>
+  .badges {
+    background: var(--color-cream-deep);
+    padding: 20px 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    font-family: var(--font-sans);
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .badges {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .badge {
+    font-size: 11px;
+    color: #2a2a2a;
+    line-height: 1.4;
+  }
+
+  .icon {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .title {
+    font-weight: 600;
+  }
+</style>
