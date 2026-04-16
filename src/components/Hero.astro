@@ -1,0 +1,84 @@
+---
+import {copy} from '../content/copy'
+import {contact} from '../content/contact'
+---
+
+<section class="hero">
+  <div class="eyebrow">{copy.heroEyebrow}</div>
+  <h1 class="headline">
+    A joyful start, <em>immersed in music.</em>
+  </h1>
+  <p class="body">{copy.heroBody}</p>
+  <div class="ctas">
+    <a
+      class="cta-primary"
+      href={contact.inquiryFormUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {copy.heroCta} ↗
+    </a>
+    <a class="cta-secondary" href={contact.phoneHref}>📞 {contact.phone}</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 44px 22px 32px;
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-deep) 100%);
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: #7a5a1a;
+  }
+
+  .headline {
+    font-family: var(--font-serif);
+    font-size: clamp(28px, 6vw, 44px);
+    line-height: 1.15;
+    color: var(--color-navy);
+    margin: 12px 0 0;
+    font-weight: 500;
+  }
+
+  .headline em {
+    color: var(--color-teal);
+    font-style: italic;
+  }
+
+  .body {
+    font-family: var(--font-sans);
+    color: #3a3a2a;
+    max-width: 36rem;
+    margin: 14px 0 0;
+  }
+
+  .ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .cta-primary, .cta-secondary {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .cta-primary {
+    background: var(--color-navy);
+    color: var(--color-cream);
+    font-weight: 600;
+  }
+
+  .cta-secondary {
+    border: 1.5px solid var(--color-navy);
+    color: var(--color-navy);
+  }
+</style>
