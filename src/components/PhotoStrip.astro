@@ -1,0 +1,50 @@
+---
+import {Image} from 'astro:assets'
+import piano from '../assets/photos/piano-ribbons.jpg'
+import guitar from '../assets/photos/guitar-staff.jpg'
+---
+
+<section class="strip">
+  <div class="left">
+    <Image
+      src={piano}
+      alt="Two children sitting at a piano holding colorful ribbon streamers, smiling"
+      widths={[400, 800, 1200]}
+      sizes="(max-width: 768px) 66vw, 66vw"
+      format="webp"
+      quality={80}
+    />
+  </div>
+  <div class="right">
+    <Image
+      src={guitar}
+      alt="A Songbirds staff member with a guitar in front of the SLAY logo and state education licenses"
+      widths={[300, 600, 900]}
+      sizes="(max-width: 768px) 33vw, 33vw"
+      format="webp"
+      quality={80}
+    />
+  </div>
+</section>
+
+<style>
+  .strip {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 6px;
+    padding: 0 22px;
+  }
+
+  .strip :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .left, .right {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+</style>
