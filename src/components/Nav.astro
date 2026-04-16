@@ -1,0 +1,49 @@
+---
+import {contact} from '../content/contact'
+---
+
+<nav class="nav">
+  <a href="/" class="nav-brand">🎵 {contact.name.toUpperCase()}</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#program">Program</a>
+    <a href={contact.inquiryFormUrl} target="_blank" rel="noopener noreferrer" class="nav-cta">
+      Inquire ↗
+    </a>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    background: var(--color-navy);
+    color: var(--color-cream);
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-brand {
+    font-weight: 600;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .nav-cta {
+    color: var(--color-gold);
+    font-weight: 600;
+  }
+
+  @media (max-width: 520px) {
+    .nav-links a:not(.nav-cta) {
+      display: none;
+    }
+  }
+</style>
