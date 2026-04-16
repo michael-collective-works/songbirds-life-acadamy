@@ -1,0 +1,15 @@
+export const contact = {
+  name: 'Songbirds Life Academy',
+  tagline: 'Learning through play, immersed in music.',
+  phone: '225.635.7973',
+  phoneHref: 'tel:+12256357973',
+  address: '5915 N. Commerce Street, St. Francisville, LA 70775',
+  addressHref: 'https://maps.google.com/?q=5915+N.+Commerce+Street,+St.+Francisville,+LA+70775',
+  hours: 'Mon–Fri 6:30AM – 5:30PM',
+  hoursNote: 'Extended hours available upon request',
+  instagram: 'https://instagram.com/songbirdslifeacademy',
+  facebook: 'https://facebook.com/songbirdslifeacademy',
+  handle: '@songbirdslifeacademy',
+  inquiryFormUrl:
+    'https://docs.google.com/forms/d/e/1FAIpQLScscInS8DxErCY4MZX4yDZicZjMDvmjrwzRfNmfNK4hGjQT3Q/viewform',
+} as const
