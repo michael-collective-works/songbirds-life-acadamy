@@ -47,10 +47,10 @@ describe('rendered index.html', () => {
     expect(bodyText).toContain('Daily communication and photo updates')
   })
 
-  it('has alt text on every image', () => {
+  it('has an alt attribute on every image (empty allowed for decorative)', () => {
     $('img').each((_, el) => {
       const alt = $(el).attr('alt')
-      expect(alt, `img missing alt: ${$(el).attr('src')}`).toBeTruthy()
+      expect(alt, `img missing alt attribute: ${$(el).attr('src')}`).toBeDefined()
     })
   })
 
