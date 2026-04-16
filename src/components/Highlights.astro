@@ -1,0 +1,64 @@
+---
+import {copy} from '../content/copy'
+
+const accentVar = {
+  'burnt-orange': 'var(--color-burnt-orange)',
+  'teal': 'var(--color-teal)',
+  'gold': 'var(--color-gold)',
+  'navy': 'var(--color-navy)',
+} as const
+---
+
+<section id="program" class="highlights">
+  <div class="eyebrow">{copy.highlightsEyebrow}</div>
+  <ul class="grid">
+    {copy.highlights.map((item) => (
+      <li class="card" style={`--accent:${accentVar[item.accent]}`}>
+        <span class="text">{item.text}</span>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .highlights {
+    padding: 28px 22px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--color-bronze);
+  }
+
+  .grid {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: #fff;
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    box-shadow: var(--shadow-soft);
+    border-radius: 2px;
+  }
+
+  .text {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: #2a2a2a;
+    line-height: 1.5;
+  }
+</style>
