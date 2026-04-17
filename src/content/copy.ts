@@ -21,7 +21,7 @@ export const copy = {
       name: 'Early Childhood Education',
       ages: 'Ages 0–4',
       description:
-        'Full-time, music-immersed early childhood care. The day moves between lullabies, exploration, movement, and intentional learning moments grounded in The Creative Curriculum®.',
+        'Full-time, music-immersed early childhood education. The day moves between lullabies, exploration, movement, and intentional learning moments grounded in The Creative Curriculum®.',
       accent: 'teal',
       ctaLabel: 'Inquire',
       ctaKey: 'inquiryFormUrl',
