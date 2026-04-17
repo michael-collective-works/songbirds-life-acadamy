@@ -13,7 +13,7 @@ export const contact = {
   facebook: 'https://facebook.com/songbirdslifeacademy',
   handle: '@songbirdslifeacademy',
   inquiryFormUrl:
-    'https://docs.google.com/forms/d/e/1FAIpQLScscInS8DxErCY4MZX4yDZicZjMDvmjrwzRfNmfNK4hGjQT3Q/viewform',
+    'https://schools.mybrightwheel.com/sign-in?redirect_path=forms/4fbd9563-d5f6-4bc3-acb2-ef00f0aeaf59/self-service',
   musicLessonsSignupUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLScscInS8DxErCY4MZX4yDZicZjMDvmjrwzRfNmfNK4hGjQT3Q/viewform',
 } as const

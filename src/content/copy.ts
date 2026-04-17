@@ -23,8 +23,8 @@ export const copy = {
       description:
         'Full-time, music-immersed early childhood care. The day moves between lullabies, exploration, movement, and intentional learning moments grounded in The Creative Curriculum®.',
       accent: 'teal',
-      ctaLabel: null,
-      ctaKey: null,
+      ctaLabel: 'Inquire',
+      ctaKey: 'inquiryFormUrl',
     },
     {
       name: 'Aftercare',
@@ -32,8 +32,8 @@ export const copy = {
       description:
         'Afternoon care for school-age children after the regular school day. Music, movement, homework support, and free play in a warm, supervised setting.',
       accent: 'bronze',
-      ctaLabel: null,
-      ctaKey: null,
+      ctaLabel: 'Inquire',
+      ctaKey: 'inquiryFormUrl',
     },
     {
       name: 'After Hours Music Lessons',
