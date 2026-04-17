@@ -18,7 +18,7 @@ export const copy = {
   programsLead: 'Three ways to join the Songbirds community.',
   programs: [
     {
-      name: 'Early Learning Care',
+      name: 'Early Childhood Education',
       ages: 'Ages 0–4',
       description:
         'Full-time, music-immersed early childhood care. The day moves between lullabies, exploration, movement, and intentional learning moments grounded in The Creative Curriculum®.',
@@ -82,7 +82,7 @@ export const copy = {
     {
       question: 'What makes Songbirds different?',
       answer:
-        'Music is the daily rhythm of our classrooms — not an occasional activity. Every day includes singing, clapping, movement, and instrumentation, woven into a research-based Creative Curriculum with low teacher-to-child ratios.',
+        'Led by a lifelong St. Francisville native — a local heart shapes everything we do. Here, music is our daily rhythm. We weave singing, instruments, and movement into a research-based Creative Curriculum, all supported by low teacher-to-child ratios.',
     },
     {
       question: 'How do I enroll?',
