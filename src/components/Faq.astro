@@ -1,0 +1,95 @@
+---
+import {copy} from '../content/copy'
+---
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="eyebrow">{copy.faqEyebrow}</div>
+    <h2 class="intro">{copy.faqIntro}</h2>
+    <div class="list">
+      {copy.faq.map((item) => (
+        <details class="item">
+          <summary class="question">
+            <span>{item.question}</span>
+            <span class="chevron">+</span>
+          </summary>
+          <p class="answer">{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    padding: 56px 0 64px;
+    background: var(--color-cream);
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: var(--color-bronze);
+  }
+
+  .intro {
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 3vw, 30px);
+    color: var(--color-navy);
+    line-height: 1.3;
+    margin: 12px 0 28px;
+    font-weight: 500;
+    max-width: 36rem;
+    letter-spacing: -0.005em;
+  }
+
+  .list {
+    display: grid;
+    gap: 0;
+    max-width: 42rem;
+    border-top: 1px solid rgba(21, 40, 70, 0.14);
+  }
+
+  .item {
+    border-bottom: 1px solid rgba(21, 40, 70, 0.14);
+    font-family: var(--font-sans);
+  }
+
+  .item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-navy);
+  }
+
+  .item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .chevron {
+    color: var(--color-teal);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .item[open] .chevron {
+    transform: rotate(45deg);
+  }
+
+  .answer {
+    margin: 0 4px 20px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #3a3a3a;
+    max-width: 36rem;
+  }
+</style>

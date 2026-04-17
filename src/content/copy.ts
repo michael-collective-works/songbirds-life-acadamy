@@ -61,4 +61,33 @@ export const copy = {
   ctaHeadline:
     'Partner with us to give your child a joyful beginning where learning and love go hand in hand.',
   ctaButton: 'Schedule a visit',
+  faqEyebrow: 'COMMON QUESTIONS',
+  faqIntro: 'Quick answers to what parents ask most.',
+  faq: [
+    {
+      question: 'What ages do you accept?',
+      answer:
+        'Our Early Learning Program serves children ages 0 to 4, our Aftercare program serves ages 4 to 12, and our After Hours Music Lessons are open to everyone ages 7 to 99.',
+    },
+    {
+      question: 'What are your hours?',
+      answer:
+        'Monday through Friday, 6:30 AM to 5:30 PM. Extended hours are available upon request. After Hours Music Lessons are scheduled separately — reach out for availability.',
+    },
+    {
+      question: 'Can I visit before enrolling?',
+      answer:
+        'Yes — tours are encouraged. Start an inquiry through the form on this page or call 225.635.7973 and we will reply within 24 hours to schedule a time that works for your family.',
+    },
+    {
+      question: 'What makes Songbirds different?',
+      answer:
+        'Music is the daily rhythm of our classrooms — not an occasional activity. Every day includes singing, clapping, movement, and instrumentation, woven into a research-based Creative Curriculum with low teacher-to-child ratios.',
+    },
+    {
+      question: 'How do I enroll?',
+      answer:
+        'Start with the inquiry form or a phone call. After a tour, we will walk you through the enrollment paperwork and available start dates.',
+    },
+  ],
 } as const
