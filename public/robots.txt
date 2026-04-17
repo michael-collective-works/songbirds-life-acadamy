@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://songbirdslifeacademy.com/sitemap-index.xml
