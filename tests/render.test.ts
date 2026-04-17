@@ -38,13 +38,13 @@ describe('rendered index.html', () => {
     expect(tel.first().attr('href')).toBe('tel:+12256357973')
   })
 
-  it('renders all four program highlights', () => {
+  it('renders key credentials in the unified grid', () => {
     const bodyText = $('body').text()
 
-    expect(bodyText).toContain('Low teacher-to-child ratios')
-    expect(bodyText).toContain('Music and movement activities every day')
-    expect(bodyText).toContain('Sensory-rich classrooms')
-    expect(bodyText).toContain('Daily communication and photo updates')
+    expect(bodyText).toContain('Low Teacher-to-Child Ratios')
+    expect(bodyText).toContain('Music & Movement Daily')
+    expect(bodyText).toContain('Sensory-Rich Classrooms')
+    expect(bodyText).toContain('Daily Photo Updates')
   })
 
   it('has an alt attribute on every image (empty allowed for decorative)', () => {
