@@ -3,7 +3,7 @@ export const copy = {
   heroHeadline: 'A joyful start, immersed in music.',
   heroBody:
     'Early learning, aftercare, and after-hours music lessons — rooted in creativity, community, and research-based practice.',
-  heroCta: 'Schedule a visit',
+  heroCta: 'Inquire',
   responseNote: 'We reply within 24 hours and can schedule a tour.',
   missionEyebrow: 'A STRONG START · A LASTING SONG',
   missionLead:
@@ -60,7 +60,7 @@ export const copy = {
   ],
   ctaHeadline:
     'Partner with us to give your child a joyful beginning where learning and love go hand in hand.',
-  ctaButton: 'Schedule a visit',
+  ctaButton: 'Inquire',
   faqEyebrow: 'COMMON QUESTIONS',
   faqIntro: 'Quick answers to what parents ask most.',
   faq: [
